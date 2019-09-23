@@ -1,0 +1,32 @@
+ext {
+    android = [
+            compileSdkVersion      : 29,
+            buildToolsVersion      : "29.0.2",
+            applicationId          : "com.zss.baselibrary",
+            minSdkVersion          : 16,
+            targetSdkVersion       : 29,
+            versionCode            : 1,
+            versionName            : "1.0",
+            kotlinVersion          : "1.3.50",
+            kotlinCoroutinesVersion: "1.3.1",
+            appcompactVersion      : "1.1.0",
+            coreKtxVersion         : "1.0.2",
+    ]
+
+    dependVersion = [
+            glideVersion    : "4.9.0",
+            glideWebpVersion: "1.5.4.8.0"
+    ]
+
+    dependencies = [
+            "glide"                   : "com.github.bumptech.glide:glide:${dependVersion.glideVersion}",
+            "glideAnnotationProcessor": "com.github.bumptech.glide:compiler:${dependVersion.glideVersion}",
+            "glideKapt"               : "com.github.bumptech.glide:compiler:${dependVersion.glideVersion}",
+            "appcompact"              : "androidx.appcompat:appcompat:${android.appcompactVersion}",
+            "core-ktx"                : "androidx.core:core-ktx:${android.coreKtxVersion}",
+            "coroutines-core"         : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${android.kotlinCoroutinesVersion}",
+            "coroutines-android"      : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${android.kotlinCoroutinesVersion}",
+            "kotlin-stdlib-jdk7"      : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${android.kotlinVersion}",
+            "glideWebp"               : "com.zlc.glide:webpdecoder:${dependVersion.glideWebpVersion}"
+    ]
+}
